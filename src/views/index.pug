@@ -1,0 +1,54 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    title Геоотзыв
+    meta(name="description" content="")
+    meta(name="viewport" content="width=device-width")
+
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css")
+    
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js")
+    //- script(src="http://vk.com/js/api/openapi.js")
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+  body
+    //- #map
+
+    script#popup(type="text/x-handlebars-template").
+      <div class="popup">
+        <div class="popup-head">
+          <div class="popup-place">
+            <div class="icon icon-map-marker"></div>
+            <span class="popup-address">{{address}}</span>
+          </div>
+          <div class="popup-close">
+            <div class="icon icon-close"></div>
+          </div>
+        </div>
+        <div class="popup-review">
+          {{#each reviews}}
+            <div class="review">
+              <div class="review-title">
+                <span class="review-user">{{user}}</span>
+                <span class="review-place">{{place}}</span>
+                <span class="review-date">{{date}}</span>
+              </div>
+              <div class="review-text">{{text}}</div>
+            </div>
+          {{/each}}
+        </div>
+        <div class="hr"></div>
+        <div class="popup-form">
+          <div class="form">
+            <h3 class="form-head">Ваш отзыв</h3>
+            <input class="form-input" type="text" name="" placeholder="Ваше имя">
+            <input class="form-input" type="text" name="" placeholder="Укажите место">
+            <textarea class="form-textarea" name="" placeholder="Поделитесь впечатлениями"></textarea>
+            <div class="form-controls">
+              <button class="btn" type="button">Добавить</button>
+            </div>
+          </div>
+        </div>
+      </div>

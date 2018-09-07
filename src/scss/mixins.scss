@@ -1,0 +1,31 @@
+@function rem($pixels, $context: 16) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+@mixin placeholder {
+  &:-ms-input-placeholder {
+    @content
+  }
+  &::-moz-placeholder {
+    @content
+  }
+  &::-webkit-input-placeholder {
+    @content
+  }
+}
+
+@mixin adaptive($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+//min-width: 1200

@@ -1,0 +1,44 @@
+.form {
+  padding: 15px;
+  font-size: 0;
+}
+
+.form-head {
+  color: $orange;
+  font-family: "Fira Sans";
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  border: 1px solid $gray-200;
+  background-color: $white;
+  border-radius: 15px;
+  font-family: "Fira Sans";
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+  outline: none;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+
+  @include placeholder {
+    color: $gray-300;
+  }
+}
+
+.form-input {
+  height: 32px;
+}
+
+.form-textarea {
+  height: 129px;
+  resize: none;
+}
+
+.form-controls {
+  text-align: right;
+}

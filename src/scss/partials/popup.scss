@@ -1,0 +1,33 @@
+.popup {
+  width: 379px;
+  background-color: $white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.popup-head {
+  background-color: $orange;
+  height: 44px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup-place {
+  display: flex;
+  align-items: center;
+}
+
+.popup-address {
+  color: $white;
+  font-family: "Fira Sans";
+  font-size: 12px;
+  font-weight: 300;
+  margin-left: 7px;
+}
+
+.popup-review {
+  height: 154px;
+  padding: 15px;
+}

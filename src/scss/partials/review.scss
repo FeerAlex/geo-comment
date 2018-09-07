@@ -1,0 +1,36 @@
+.review {
+  color: $gray-400;
+  font-family: "Fira Sans";
+  margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.review-title {
+  margin-bottom: 6px;
+}
+
+.review-user {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.review-place, .review-date {
+  opacity: 0.75;
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 9px;
+}
+
+.review-date {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.review-text {
+  font-size: 15px;
+  line-height: 22px;
+  display: inline-block;
+}

@@ -10,10 +10,10 @@
 .review-item {
   color: $gray-400;
   font-family: "Fira Sans";
-  margin-bottom: 22px;
+  margin-top: 22px;
 
-  &:last-child {
-    margin-bottom: 0;
+  &:first-child {
+    margin-top: 0;
   }
 }
 

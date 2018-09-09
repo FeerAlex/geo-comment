@@ -37,7 +37,7 @@ export default class Popup {
     }
 
     this.data.reviews.push({ user, place, text, date });
-
+    this.form.reset();
     this.updateReview();
   }
 

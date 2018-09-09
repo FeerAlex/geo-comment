@@ -1,4 +1,13 @@
-.review {
+.review-list {
+  list-style: none;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  padding: 0 15px;
+  position: relative;
+}
+
+.review-item {
   color: $gray-400;
   font-family: "Fira Sans";
   margin-bottom: 22px;

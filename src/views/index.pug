@@ -11,44 +11,48 @@ html(lang="ru")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css")
     
     script(src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js")
-    //- script(src="http://vk.com/js/api/openapi.js")
     script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
   body
-    //- #map
+    #map
 
     script#popup(type="text/x-handlebars-template").
-      <div class="popup">
-        <div class="popup-head">
-          <div class="popup-place">
-            <div class="icon icon-map-marker"></div>
-            <span class="popup-address">{{address}}</span>
-          </div>
-          <div class="popup-close">
-            <div class="icon icon-close"></div>
-          </div>
+      <div class="popup-head">
+        <div class="popup-place">
+          <div class="icon icon-map-marker"></div>
+          <span class="popup-address">{{pos.address}}</span>
         </div>
-        <div class="popup-review">
-          {{#each reviews}}
-            <div class="review">
-              <div class="review-title">
-                <span class="review-user">{{user}}</span>
-                <span class="review-place">{{place}}</span>
-                <span class="review-date">{{date}}</span>
-              </div>
-              <div class="review-text">{{text}}</div>
-            </div>
-          {{/each}}
-        </div>
-        <div class="hr"></div>
-        <div class="popup-form">
-          <div class="form">
-            <h3 class="form-head">Ваш отзыв</h3>
-            <input class="form-input" type="text" name="" placeholder="Ваше имя">
-            <input class="form-input" type="text" name="" placeholder="Укажите место">
-            <textarea class="form-textarea" name="" placeholder="Поделитесь впечатлениями"></textarea>
-            <div class="form-controls">
-              <button class="btn" type="button">Добавить</button>
-            </div>
-          </div>
+        <div class="popup-close">
+          <div class="icon icon-close js-close"></div>
         </div>
       </div>
+      <div class="popup-review">
+        <ul class="review-list"></ul>
+      </div>
+      <div class="hr"></div>
+      <div class="popup-form">
+        <form class="form">
+          <h3 class="form-head">Ваш отзыв</h3>
+          <input class="form-input" type="text" name="user" placeholder="Ваше имя">
+          <input class="form-input" type="text" name="place" placeholder="Укажите место">
+          <textarea class="form-textarea" name="text" placeholder="Поделитесь впечатлениями"></textarea>
+          <div class="form-controls">
+            <button class="btn js-add" type="button">Добавить</button>
+          </div>
+        </form>
+      </div>
+
+    script#reviews(type="text/x-handlebars-template").
+      {{#if reviews}}
+        {{#each reviews}}
+          <li class="review-item">
+            <div class="review-title">
+              <span class="review-user">{{user}}</span>
+              <span class="review-place">{{place}}</span>
+              <span class="review-date">{{date}}</span>
+            </div>
+            <div class="review-text">{{text}}</div>
+          </li>
+        {{/each}}
+      {{ else }}
+        <span>Отзывов пока нет ...</span>
+      {{/if}}

@@ -66,6 +66,57 @@ button, input {
     height: 12px;
     background-size: 12px;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzLjMwNiAzLjMwNiI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTMuMTUuMTU2YS41My41MyAwIDAgMSAwIC43NDhsLS43NDguNzQ5Ljc0OS43NDlhLjUzLjUzIDAgMSAxLS43NS43NDlsLS43NDgtLjc1LS43NDkuNzVhLjUzLjUzIDAgMSAxLS43NDgtLjc1bC43NDgtLjc0OEwuMTU2LjkwNEEuNTMuNTMgMCAxIDEgLjkwNC4xNTZsLjc1Ljc0OC43NDgtLjc0OGEuNTMuNTMgMCAwIDEgLjc0OSAweiIvPjwvc3ZnPg==);
+    cursor: pointer;
+}
+
+.scroll {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    z-index: 2;
+    width: 15px;
+    cursor: pointer;
+}
+
+.scroll-track {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    margin: 0 auto;
+    width: 3px;
+    height: 80px;
+    background-color: $gray-200;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.ymaps-2-1-68-b-cluster-carousel__content-item {
+    height: 100%;
+}
+
+.ymaps-2-1-68-b-cluster-carousel__content-item > ymaps {
+    height: 100%;
+}
+
+.ymaps-2-1-68-b-cluster-carousel__item-content-inner{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.ymaps-2-1-68-b-cluster-carousel__body {
+    flex: 1 0 auto;
+}
+.ymaps-2-1-68-b-cluster-carousel__footer {
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.cluster-link {
+    color: blue;
+}
+
+.cluster-content {
+    margin-top: 10px;
 }
 
 @import './partials/popup';
